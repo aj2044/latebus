@@ -26,6 +26,28 @@
     <a href="bus1004.html"/><h2>1004</h2></a>
     <a href="bus1006.html"/><h2>1006</h2></a>
   </div>
-  <a href="reportBusStatus.html"><button>Report Bus Status</button></a>  
+  <a href="reportBusStatus.html"><button>Report Bus Status</button></a> 
+
+<!--attempting to make a google map appear on page -->
+<h3>Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+          <!--ingraham latitude: 47.726064 longitude: -122.337908-->
+        var ingraham = {lat: 47.726064, lng:-122.337908};
+        var busMap = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: ingraham
+        });
+        var marker = new google.maps.Marker({
+          position: ingraham,
+          map: busMap
+        });
+      }
+    </script>
+    <script async defer
+    <!-- api key: AIzaSyCSzD9haJ-HWTjwRef7MuNL_lUtXJiYfic-->
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSzD9haJ-HWTjwRef7MuNL_lUtXJiYfic&callback=initMap">
+    </script>
 </body>
 </html>
